@@ -1,0 +1,51 @@
+$main-bg: #f5f7fa;
+$base-color: #527195;
+
+$font-main: #222;
+
+$font-weaken: #999;
+
+.ant-btn{
+    border-radius: 2em;
+}
+
+.account-top {
+    .ant-radio-button-wrapper {
+        width: 72px;
+        text-align: center;
+        background-color: #f5f7fa;
+        border-color: #f5f7fa;
+        border-width: 2px;
+
+        &:first-child {
+            border-bottom-left-radius: 2em;
+            border-top-left-radius: 2em;
+        }
+
+        &:last-child{
+            border-bottom-right-radius: 2em;
+            border-top-right-radius: 2em;
+        }
+
+
+
+    }
+
+    .ant-radio-button-wrapper-checked {
+        background-color: #82a1b5;
+        border-width: 2px;
+        border-color: white;
+
+        &:not(.ant-radio-button-wrapper-disabled)::before{
+            background-color:#f5f7fa ;
+        }
+
+        &:hover{
+            background-color: #92b1c5;
+            border-color: white;
+        }
+    }
+}
+.ant-switch-checked{
+    background-color: #44B549;
+}

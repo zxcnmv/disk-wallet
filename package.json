@@ -1,0 +1,63 @@
+{
+  "name": "disk-wallet",
+  "version": "0.0.3",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service build --mode development --watch",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@ant-design/icons-vue": "^6.0.1",
+    "@sensible-contract/sensible-api": "^1.0.8",
+    "ant-design-vue": "^2.1.6",
+    "axios": "^0.20.0",
+    "bn.js": "=4.11.9",
+    "bsv": "^1.5.6",
+    "buffer": "4.9.2",
+    "clipboard": "^2.0.8",
+    "core-js": "^3.22.3",
+    "crypto-js": "^4.0.0",
+    "qrcode.vue": "^3.2.2",
+    "sensible-sdk": "7.4.0-beta.2",
+    "vue": "3.2.20",
+    "vue-chrome-i18n": "^1.0.2",
+    "vue-i18n": "^9.2.0-beta.34",
+    "vue-router": "^4.0.8",
+    "vuex": "^4.0.1"
+  },
+  "devDependencies": {
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@vue/cli-plugin-babel": "4.5.13",
+    "@vue/cli-plugin-router": "4.5.13",
+    "@vue/cli-plugin-vuex": "4.5.13",
+    "@vue/cli-service": "4.5.13",
+    "@vue/compiler-sfc": "^3.2.31",
+    "less": "^3.13.1",
+    "less-loader": "^6.0.0",
+    "sass": "^1.51.0",
+    "sass-loader": "^8.0.2",
+    "vue-cli-plugin-browser-extension": "latest",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true,
+      "webextensions": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

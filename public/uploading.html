@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>uploading</title>
+    <style>
+        .sensilet-loading-panel {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 10vw;
+            height: 10vh;
+            background-color: #f5f7fa;
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .sensilet-loading {
+            width: 40px;
+            height: 40px;
+            position: relative;
+            animation: load-container 1.2s linear infinite;
+            -webkit-animation: load-container 1.2s linear infinite;
+        }
+
+        .sensilet-loading span {
+            display: inline-block;
+            width: 40%;
+            height: 40%;
+            border-radius: 100%;
+            background: #527195;
+            position: absolute;
+            opacity: 0.3;
+            animation: load 2s linear infinite;
+            -webkit-animation: load 2s linear infinite;
+        }
+        @-webkit-keyframes load-container {
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+
+        @-webkit-keyframes load {
+            0% {opacity: 0.3; }
+            50%{opacity: 1}
+            100% { opacity: 0.3;}
+        }
+
+        .sensilet-loading span:nth-child(1) {
+            left: 0;
+            top: 0;
+        }
+
+        .sensilet-loading span:nth-child(2) {
+            right: 0;
+            top: 0;
+            animation-delay: 0.4s;
+        }
+
+        .sensilet-loading span:nth-child(3) {
+            right: 0;
+            bottom: 0;
+            animation-delay: 0.8s;
+        }
+
+        .sensilet-loading span:nth-child(4) {
+            left: 0;
+            bottom: 0;
+            animation-delay: 1.2s;
+        }
+
+    </style>
+
+</head>
+<body>
+<div id="app">
+    <!--      loading-->
+    <div class="sensilet-loading-panel">
+        <div class="loading">
+            <span></span><span></span><span></span><span></span>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

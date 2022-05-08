@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "__MSG_extName__",
+  "homepage_url": "https://metadisk.purem.cc",
+  "description": "A Browser Extension Wallet",
+  "default_locale": "en",
+  "content_security_policy": {"extension_pages": "script-src 'self' ;object-src 'self';style-src 'self' 'unsafe-inline';connect-src *"},
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "icons": {
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  },
+  "background": {
+    "service_worker": "js/background.js"
+  },
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": [
+        "js/content-script.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "web_accessible_resources": [{
+    "resources":["script.js"],
+    "matches":["<all_urls>"]
+  }],
+  
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "__MSG_extName__",
+    "default_icon": {
+      "48": "icons/48.png"
+    }
+  }
+}
